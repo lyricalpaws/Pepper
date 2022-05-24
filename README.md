@@ -1,4 +1,8 @@
-# Pepper
+# Pepper - A Discord Bot
+
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Emoji_u1f336.svg/1024px-Emoji_u1f336.svg.png" width="250" height="250">
+</p>
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
@@ -11,3 +15,7 @@
 [![](https://img.shields.io/discord/423879867457863680.svg?style=flat-square&label=Support%20Guild&colorB=D896FF)](https://discordapp.com/invite/dkTa8VQ)
 [![CodeFactor](https://www.codefactor.io/repository/github/lyricalpaws/Pepper/badge)](https://www.codefactor.io/repository/github/lyricalpaws/Pepper)
 [![Build Status](https://travis-ci.org/pawbot-discord/Pawbot.svg?branch=master)](https://travis-ci.org/lyricalpaws/Pepper)
+
+
+##What is Pepper?
+Pepper is a multi-function bot designed to do a little bit of everything. It is largely based on what I find useful and what I need, though additions are always appreciated.
