@@ -65,8 +65,8 @@ class Admin(commands.Cog):
         """ Reloads an extension. """
         await ctx.message.add_reaction("a:loading:528744937794043934")
         try:
-            self.bot.unload_extension(f"cogs.{name}")
-            self.bot.load_extension(f"cogs.{name}")
+            await self.bot.unload_extension(f"cogs.{name}")
+            await self.bot.load_extension(f"cogs.{name}")
         except ModuleNotFoundError:
             await ctx.message.remove_reaction(
                 "a:loading:528744937794043934", member=ctx.me
@@ -86,7 +86,7 @@ class Admin(commands.Cog):
         """ Reboot the bot """
         await ctx.send("Rebooting now...")
         time.sleep(1)
-        await self.bot.logout()
+        await self.bot.close()
 
     @commands.command(hidden=True)
     @commands.check(repo.is_owner)
@@ -94,7 +94,7 @@ class Admin(commands.Cog):
         """ Loads an extension. """
         await ctx.message.add_reaction("a:loading:528744937794043934")
         try:
-            self.bot.load_extension(f"cogs.{name}")
+            await self.bot.load_extension(f"cogs.{name}")
         except ModuleNotFoundError:
             await ctx.message.remove_reaction(
                 "a:loading:528744937794043934", member=ctx.me
@@ -114,7 +114,7 @@ class Admin(commands.Cog):
         """ Unloads an extension. """
         await ctx.message.add_reaction("a:loading:528744937794043934")
         try:
-            self.bot.unload_extension(f"cogs.{name}")
+            await self.bot.unload_extension(f"cogs.{name}")
         except ModuleNotFoundError:
             await ctx.message.remove_reaction(
                 "a:loading:528744937794043934", member=ctx.me

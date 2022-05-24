@@ -108,7 +108,7 @@ class Information(commands.Cog):
                 )
                 .set_footer(
                     text=f"Type {ctx.prefix}help <command> for more help".replace(
-                        ctx.me.mention, "@Pawbot "
+                        ctx.me.mention, "@Pepper "
                     ),
                     icon_url=ctx.author.avatar_url,
                 )
@@ -157,7 +157,7 @@ class Information(commands.Cog):
     @commands.command()
     async def invite(self, ctx):
         """ Get an invite for me! """
-        button = Button(label="Invite Me!", style=discord.ButtonStyle.link, url=f"https://discord.com/api/oauth2/authorize?client_id={self.bot.application_id}&permissions=8&scope=bot", emoji="<a:catdancerainbow:720036266183491756>")
+        button = Button(label="Invite Me!", style=discord.ButtonStyle.link, url=f"https://discord.com/api/oauth2/authorize?client_id={self.bot.application_id}&permissions=1565448858743&scope=bot", emoji="<a:catdancerainbow:720036266183491756>")
         view = View()
         view.add_item(button)
         await ctx.send("To invite me, use the \"Add to Server\" button on my profile, or click below!", view=view)
@@ -209,7 +209,7 @@ class Information(commands.Cog):
         embed.add_field(name="Uptime", value=self.get_bot_uptime(brief=True))
         embed.add_field(name="Owner", value="Paws#7605")
         embed.set_footer(
-            text="Made with Pycord", icon_url="http://i.imgur.com/5BFecvA.png"
+            text="Made with d.py", icon_url="http://i.imgur.com/5BFecvA.png"
         )
         await ctx.send(embed=embed)
 
@@ -352,6 +352,16 @@ class Information(commands.Cog):
         if len(msg) > 2000:
             return await ctx.send("Output too long to display.")
         await ctx.send(msg)
+
+    @commands.command()
+    async def projects(self, ctx):
+        """ Find my sister projects! """
+        pepperButton = Button(label="Pepper", style=discord.ButtonStyle.link, url="https://github.com/lyricalpaws/Pepper", emoji="<:github:533767665542496267>")
+        sixfixButton = Button(label="sixFix", style=discord.ButtonStyle.link, url="https://github.com/Twxtter/Twxtter-main", emoji="<:twitfix:977001630073503744>")
+        view = View()
+        view.add_item(pepperButton)
+        view.add_item(sixfixButton)
+        await ctx.send("Use the Pepper button below to go to my Github repo, or sixFix to visit my sister project.", view=view)
 
 
 async def setup(bot):
