@@ -17,5 +17,5 @@
 [![Build Status](https://travis-ci.org/pawbot-discord/Pawbot.svg?branch=master)](https://travis-ci.org/lyricalpaws/Pepper)
 
 
-##What is Pepper?
+## What is Pepper?
 Pepper is a multi-function bot designed to do a little bit of everything. It is largely based on what I find useful and what I need, though additions are always appreciated.
